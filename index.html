@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="algo_button">
+          <button class="algorithms">
+            Algorithms <img id="dropdown-icon" src="icons/dropdown.svg" />
+          </button>
+          <ul class="dropdown">
+            <li
+              class="first"
+              id="A* Algorithm"
+              onmousedown="choose_algorithm(this.id)"
+            >
+              A* Algorithm
+            </li>
+            <li
+              id="Dijkstra's Algorithm"
+              onmousedown="choose_algorithm(this.id)"
+            >
+              Dijkstra’s
+            </li>
+            <li
+              id="Greedy First Search"
+              onmousedown="choose_algorithm(this.id)"
+            >
+              Greedy Best First-search
+            </li>
+            <li
+              class="last"
+              id="Breadth First Search"
+              onmousedown="choose_algorithm(this.id)"
+            >
+              Breadth First Search
+            </li>
+          </ul>
+        </div>
+        <div class="buttons">
+          <button id="visualizer" onclick="run_algorithm()">
+            Visualize Algorithm
+          </button>
+          <button onclick="clear_path()">Clear Path</button>
+          <button class="clear_board" onclick="clear_board()">
+            Clear Board
+          </button>
+        </div>
+      </nav>
+      <h1 id="title">Pick an algorithm!</h1>
+      <div class="board" id="board"></div>
+    </div>
+    <script src="algorithms/code.js"></script>
+    <script src="algorithms/a_star.js"></script>
+    <script src="algorithms/breadth_first.js"></script>
+    <script src="algorithms/dijkstras.js"></script>
+    <script src="algorithms/greedy.js"></script>
+    <script src="algorithms/buttons_functions.js"></script>
+  </body>
+</html>
